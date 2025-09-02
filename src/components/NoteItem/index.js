@@ -1,11 +1,20 @@
-import {ListItem, TitleItem, NotesItem} from './styledComponents'
+import {ListItem, TitleItem, NotesItem, TitleAndDeleteContainer, DeleteIcon} from './styledComponents'
+import { AiFillDelete } from "react-icons/ai";
 
 const NoteItem = props => {
-  const {noteList} = props
-  const {title, note} = noteList
+  const {noteList, deleteNote} = props
+  const {id, title, note} = noteList
+  const onDeleteItem = () => {
+    deleteNote(id)
+  }
   return (
     <ListItem>
-      <TitleItem>{title}</TitleItem>
+      <TitleAndDeleteContainer>
+        <TitleItem>{title}</TitleItem>
+        <DeleteIcon type="button" onClick={onDeleteItem}>
+          <AiFillDelete />
+        </DeleteIcon>
+      </TitleAndDeleteContainer>
       <NotesItem>{note}</NotesItem>
     </ListItem>
   )

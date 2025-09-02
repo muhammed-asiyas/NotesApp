@@ -25,8 +25,6 @@ const Notes = () => {
 
   const [notesList, setNotesList] = useState(storedNotes || [])
 
-  //  Save notesList to localStorage whenever it changes
-
   useEffect(() => {
     console.log(notesList)
     localStorage.setItem('notesList', JSON.stringify(notesList))
@@ -52,6 +50,11 @@ const Notes = () => {
     setNote('')
   }
 
+  const deleteNote = id => {
+    const updatedNotesList = notesList.filter(eachNotes => eachNotes.id !== id)
+    setNotesList(updatedNotesList)
+  }
+
   const renderEmptyList = () => (
     <EmptyListContainer>
       <EmptyImage
@@ -67,8 +70,8 @@ const Notes = () => {
 
   return (
     <AppContainer>
+      <Heading>Notes</Heading>
       <FormContainer onSubmit={onAddNotes}>
-        <Heading>Notes</Heading>
         <InputNotBoxContainer>
           <TitleInputContainer
             type="text"
@@ -90,7 +93,7 @@ const Notes = () => {
       ) : (
         <NoteListContainer>
           {notesList.map(eachNotes => (
-            <NoteItem key={eachNotes.id} noteList={eachNotes} />
+            <NoteItem key={eachNotes.id} noteList={eachNotes} deleteNote={deleteNote} />
           ))}
         </NoteListContainer>
       )}

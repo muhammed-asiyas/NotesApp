@@ -7,6 +7,7 @@ export const AppContainer = styled.div`
   align-items: center;
   min-height: 100vh;
   padding: 30px;
+  background-color: #666468ff;
 `
 export const FormContainer = styled.form`
   display: flex;
@@ -16,10 +17,10 @@ export const FormContainer = styled.form`
   width: 100%;
 `
 export const Heading = styled.h1`
-  font-family: 'Bree Serif';
-  font-size: 40px;
+  font-family: 'Roboto';
+  font-size: 44px;
   font-weight: 600;
-  color: #4c63b6;
+  color: #100f10ff;
   @media screen and (max-width: 767px) {
     font-size: 32px;
   }
@@ -30,7 +31,9 @@ export const InputNotBoxContainer = styled.div`
   justify-content: center;
   padding: 16px;
   width: 80%;
-  box-shadow: 0px 0px 16px 5px #d8d8d8;
+  border-radius: 6px;
+  background-color: #e4daecff;
+  box-shadow: 0px 4px 12px 2px #0a090aff;
   @media screen and (max-width: 767px) {
     width: 100%;
     padding: 8px;
@@ -44,9 +47,10 @@ export const TitleInputContainer = styled.input`
   outline: none;
   width: 70%;
   font-family: 'Roboto';
-  font-size: 20px;
-  font-weight: 500;
-  color: #475569;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 600;
+  color: #100f10ff;
   margin-bottom: 30px;
   @media screen and (max-width: 767px) {
     font-size: 16px;
@@ -59,11 +63,12 @@ export const InputNote = styled.textarea`
   padding: 12px;
   border: none;
   outline: none;
-  width: 100%;
+  width: 95%;
   font-family: 'Roboto';
+  background-color: transparent;
   font-size: 20px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 500;
+  color: #100f10ff;
   @media screen and (max-width: 767px) {
     font-size: 14px;
   }
@@ -73,23 +78,24 @@ export const AddButton = styled.button`
   align-items: center;
   justify-content: center;
   align-self: flex-end;
-  background-color: #4c63b6;
-  color: #ffffff;
-  width: 76px;
+  background-color: #030303ff;
+  color: #e4daecff;
+  width: 100px;
   padding-top: 9px;
   padding-bottom: 9px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 14px 5px #040107ff;
   border: none;
   font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
 `
 export const NoteListContainer = styled.ul`
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 82%;
   flex-wrap: wrap;
   padding: 0px;
   @media screen and (max-width: 767px) {
@@ -110,11 +116,11 @@ export const EmptyHead = styled.h1`
   font-family: 'Roboto';
   font-size: 30px;
   font-weight: 500;
-  color: #334155;
+  color: #100f10ff;
 `
 export const EmptySubHead = styled.p`
   font-family: 'Roboto';
   font-size: 20px;
   font-weight: 400;
-  color: #475569;
+  color: #100f10ff;
 `
