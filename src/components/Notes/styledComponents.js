@@ -91,6 +91,11 @@ export const AddButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+    width: 80px;
+    box-shadow: 0px 0px 10px 4px #040107ff;
+  }
 `
 export const NoteListContainer = styled.ul`
   display: flex;
